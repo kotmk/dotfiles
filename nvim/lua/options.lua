@@ -1,4 +1,3 @@
--- Set <space> as the leader key
 -- NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
@@ -70,7 +69,12 @@ vim.diagnostic.config({
     float = { border = 'rounded', source = 'if_many', },
     -- underline = { severity = { min = vim.diagnostic.severity.WARN } },
     -- virtual_text = { prefix = '●', current_line = true },
-    on_jump = { float = true }
+    -- jump = { float = true },
+    jump = {
+        on_jump = function()
+            vim.diagnostic.open_float({ scope = "cursor", focus = false })
+        end,
+    },
 })
 
 
