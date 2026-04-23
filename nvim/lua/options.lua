@@ -56,6 +56,8 @@ vim.opt.termguicolors = true
 
 vim.opt.breakindent = true
 
+vim.o.winborder = 'rounded'
+
 -- disable line wrapping
 -- vim.opt.wrap = false
 
@@ -63,19 +65,6 @@ vim.opt.breakindent = true
 --vim.opt.undofile = true
 
 --vim.g.netrw_banner = 0
-
-vim.diagnostic.config({
-    severity_sort = true,
-    float = { border = 'rounded', source = 'if_many', },
-    -- underline = { severity = { min = vim.diagnostic.severity.WARN } },
-    -- virtual_text = { prefix = '●', current_line = true },
-    -- jump = { float = true },
-    jump = {
-        on_jump = function()
-            vim.diagnostic.open_float({ scope = "cursor", focus = false })
-        end,
-    },
-})
 
 
 -- [[ Add optional packages ]]

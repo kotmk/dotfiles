@@ -16,6 +16,10 @@
       "rev": "cb5bc0b2b35a6d513e3298d285db81453e791f4f",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
+    "tree-sitter-manager.nvim": {
+      "rev": "15ea3d82ad7680341be951200463d5974eb8a337",
+      "src": "https://github.com/romus204/tree-sitter-manager.nvim"
+    },
     "which-key.nvim": {
       "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
       "src": "https://github.com/folke/which-key.nvim"
