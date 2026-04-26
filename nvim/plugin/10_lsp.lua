@@ -4,6 +4,10 @@ vim.pack.add({
     'https://github.com/romus204/tree-sitter-manager.nvim',
 })
 
+require("tree-sitter-manager").setup({
+    auto_install = true
+})
+
 require("mason").setup({
     ui = {
         icons = {
@@ -17,10 +21,6 @@ require("mason").setup({
 vim.lsp.enable({
     'lua_ls',
     'basedpyright',
-})
-
-require("tree-sitter-manager").setup({
-    auto_install = true
 })
 
 vim.diagnostic.config({
@@ -40,3 +40,7 @@ vim.keymap.set(
     'n', '<leader>q', vim.diagnostic.setloclist,
     { desc = 'Open diagnostic Quickfix list' }
 )
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldenable = false
