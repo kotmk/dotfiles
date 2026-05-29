@@ -8,19 +8,6 @@ vim.keymap.set(
     { desc = 'Exit terminal mode' }
 )
 
-local toggle_line_numbering = function()
-    if vim.o.number then
-        vim.opt.number = false
-        vim.opt.relativenumber = false
-        print("Line Numbering: OFF")
-    else
-        vim.opt.number = true
-        vim.opt.relativenumber = true
-        print("Line Numbering: ON")
-    end
-end
-vim.keymap.set('n', '<leader>tl', toggle_line_numbering, { desc = 'Toggle Line Numbering' })
-
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })

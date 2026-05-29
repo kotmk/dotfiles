@@ -54,12 +54,12 @@ vim.opt.softtabstop = 4
 -- enable 24-bit RGB (TrueColor)
 vim.opt.termguicolors = true
 
+-- disable line wrapping
+-- vim.opt.wrap = false
+
 vim.opt.breakindent = true
 
 vim.o.winborder = 'rounded'
-
--- disable line wrapping
--- vim.opt.wrap = false
 
 -- enable persistent undo
 --vim.opt.undofile = true

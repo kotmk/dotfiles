@@ -40,7 +40,3 @@ vim.keymap.set(
     'n', '<leader>q', vim.diagnostic.setloclist,
     { desc = 'Open diagnostic Quickfix list' }
 )
-
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.opt.foldenable = false
